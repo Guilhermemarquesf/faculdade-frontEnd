@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmar Presença</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Botão de alternar tema -->
+  <button class="theme-toggle" id="themeBtn" title="Alternar tema" aria-label="Alternar tema">
+    🌙
+  </button>
+
+  <!-- Card principal -->
+  <div class="card">
+    <div class="card-border-glow"></div>
+
+    <p class="card-title">Você vai participar deste agito?</p>
+
+    <div class="actions">
+      <!-- Botão confirmar -->
+      <button class="btn-confirm" id="btnConfirm">
+        <div class="btn-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <span class="btn-label">Confirmar Minha Presença</span>
+      </button>
+
+      <!-- Opções secundárias -->
+      <div class="secondary-options">
+        <button class="btn-secondary" data-val="maybe">🤔 Talvez</button>
+        <button class="btn-secondary" data-val="no">😔 Não vou</button>
+      </div>
+    </div>
+
+    <!-- Mensagem de feedback -->
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

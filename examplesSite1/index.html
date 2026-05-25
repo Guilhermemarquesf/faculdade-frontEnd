@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liga dos Craques Store - Camisas de Futebol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER ANIMADO -->
+    <header class="header-animado">
+        <div class="container">
+            <div class="logo-wrapper">
+                <h1 class="logo-animated">⚽ Liga dos Craques Store</h1>
+                <div class="logo-glow"></div>
+            </div>
+            <nav class="nav-animated">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#produtos" class="nav-link">Coleção</a>
+                <a href="#top-players" class="nav-link">Craques</a>
+                <a href="#stats" class="nav-link">Stats</a>
+            </nav>
+            <div class="carrinho-badge">
+                <span id="badge-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION PARALLAX -->
+    <section id="home" class="hero-parallax">
+        <div class="stars"></div>
+        <div class="hero-content-parallax">
+            <h2 class="hero-title" data-text="Vire a Bola!">Vire a Bola!</h2>
+            <p class="hero-subtitle">As camisas dos maiores craques do futebol</p>
+            <button class="btn-hero-cta">Explorar Coleção</button>
+        </div>
+        <div class="floating-ball"></div>
+    </section>
+
+    <!-- SEÇÃO TOP PLAYERS -->
+    <section id="top-players" class="top-players">
+        <div class="container">
+            <h2 class="section-title">👑 Os Craques em Destaque</h2>
+            <div class="players-grid">
+                <div class="player-card" style="--delay: 0.1s">
+                    <div class="player-image">🔴⚫</div>
+                    <h3>Flamengo</h3>
+                    <p>Paixão Carioca</p>
+                    <div class="power-bar" style="--power: 95%"></div>
+                </div>
+                <div class="player-card" style="--delay: 0.2s">
+                    <div class="player-image">💚🤍</div>
+                    <h3>Palmeiras</h3>
+                    <p>Verdão Majestoso</p>
+                    <div class="power-bar" style="--power: 92%"></div>
+                </div>
+                <div class="player-card" style="--delay: 0.3s">
+                    <div class="player-image">⚪🖤</div>
+                    <h3>Botafogo</h3>
+                    <p>Estrela Solitária</p>
+                    <div class="power-bar" style="--power: 88%"></div>
+                </div>
+                <div class="player-card" style="--delay: 0.4s">
+                    <div class="player-image">⚪🖤</div>
+                    <h3>Corinthians</h3>
+                    <p>Timão de Ferro</p>
+                    <div class="power-bar" style="--power: 90%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUTOS COM EFEITO 3D -->
+    <section id="produtos" class="produtos-innovative">
+        <div class="container">
+            <h2 class="section-title">🏆 Coleção Exclusiva</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="home">Home</button>
+                <button class="filter-btn" data-filter="away">Away</button>
+                <button class="filter-btn" data-filter="top">Top Rated</button>
+            </div>
+
+            <div class="grid-produtos-3d">
+                <!-- Produto 1 -->
+                <div class="card-produto-3d" data-filter="home top">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/250x300?text=Flamengo" alt="Flamengo">
+                            <h3>Flamengo 2024/25</h3>
+                            <span class="badge">TOP</span>
+                        </div>
+                        <div class="card-back">
+                            <div class="preco-grande">R$ 199,90</div>
+                            <p>⭐⭐⭐⭐⭐ (128)</p>
+                            <button class="btn-comprar-3d">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="card-produto-3d" data-filter="away top">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/250x300?text=Palmeiras" alt="Palmeiras">
+                            <h3>Palmeiras 2024/25</h3>
+                            <span class="badge">TOP</span>
+                        </div>
+                        <div class="card-back">
+                            <div class="preco-grande">R$ 189,90</div>
+                            <p>⭐⭐⭐⭐⭐ (95)</p>
+                            <button class="btn-comprar-3d">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="card-produto-3d" data-filter="home">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/250x300?text=Botafogo" alt="Botafogo">
+                            <h3>Botafogo 2024/25</h3>
+                            <span class="badge">NEW</span>
+                        </div>
+                        <div class="card-back">
+                            <div class="preco-grande">R$ 179,90</div>
+                            <p>⭐⭐⭐⭐ (87)</p>
+                            <button class="btn-comprar-3d">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="card-produto-3d" data-filter="away top">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/250x300?text=Corinthians" alt="Corinthians">
+                            <h3>Corinthians 2024/25</h3>
+                            <span class="badge">TOP</span>
+                        </div>
+                        <div class="card-back">
+                            <div class="preco-grande">R$ 199,90</div>
+                            <p>⭐⭐⭐⭐⭐ (142)</p>
+                            <button class="btn-comprar-3d">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="card-produto-3d" data-filter="home">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/250x300?text=Santos" alt="Santos">
+                            <h3>Santos 2024/25</h3>
+                            <span class="badge">NEW</span>
+                        </div>
+                        <div class="card-back">
+                            <div class="preco-grande">R$ 179,90</div>
+                            <p>⭐⭐⭐⭐ (73)</p>
+                            <button class="btn-comprar-3d">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="card-produto-3d" data-filter="away">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="https://via.placeholder.com/250x300?text=Vasco" alt="Vasco">
+                            <h3>Vasco 2024/25</h3>
+                            <span class="badge">NEW</span>
+                        </div>
+                        <div class="card-back">
+                            <div class="preco-grande">R$ 189,90</div>
+                            <p>⭐⭐⭐⭐⭐ (105)</p>
+                            <button class="btn-comprar-3d">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS ANIMADAS -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="section-title">📊 Impacto Liga dos Craques</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="120">0</div>
+                    <div class="stat-label">Camisas em Catálogo</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">% Satisfação</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Países Atendidos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER INOVADOR -->
+    <section class="newsletter-inovador">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Fique por Dentro das Novidades!</h2>
+                <p>Receba dicas exclusivas de quem são os próximos craques</p>
+                <form class="form-newsletter-inovador">
+                    <input type="email" placeholder="seu@email.com" required>
+                    <button type="submit">Entrar na Liga</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-inovador">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Liga dos Craques Store</h4>
+                    <p>As melhores camisas do futebol, para os verdadeiros fãs.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#">f</a>
+                        <a href="#">📷</a>
+                        <a href="#">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Liga dos Craques Store - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #ff4d88;
+}
+
+.mensagem {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+/* efeito suave */
+.extra {
+    margin-top: 20px;
+    color: #ff4d88;
+    font-weight: bold;
+    opacity: 0;
+    animation: aparecer 3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
+}

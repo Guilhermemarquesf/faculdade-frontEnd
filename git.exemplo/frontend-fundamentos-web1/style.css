@@ -1,0 +1,88 @@
+body{
+    background-color:bisque;
+    color: black;
+    transition: 0.3;
+}
+    h1{ 
+    color: rgb(0, 0, 0); text-align: center;
+    text-decoration: #000000 underline;
+     font-family: "lato", sans-serif;
+     text-shadow: 4px 4px 4px #000000;
+}
+    p{
+        color: rgb(255, 255, 255); 
+        font-family: "lato", sans-serif;
+        padding: 15px;
+        background-color: #7FFFD4;
+        opacity: 1;
+        transition: opacity 0.6; 
+        margin-bottom: 10px;
+        background-color: #01000a;
+        text-align: center;   
+        border-radius: 50px; 
+    }   
+    
+    h2{
+       
+        
+        text-align: center;
+        font-family: "lato", sans-serif;
+    }
+    a{
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 4px #000000;
+        border: solid 2px #000000;
+        border-radius: 70px;
+        padding: 10px 20px;
+    
+      
+        
+        
+    }
+
+     img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 5px solid #000000;
+        border-radius: 50px;
+        
+     }
+
+    button{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+
+        position: fixed;
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 3px 3px;
+        cursor: pointer;
+        transition: 0.3s ease;
+     }
+
+     button:hover{
+        background-color: #ffffff;
+        color: #000000;
+        transform: scale(1.1);
+     }
+
+    button:active{
+        transform: scale(0.95);
+    }
+    body.dark {
+    background-color: black;
+    color: white;
+}
+    body.dark h1,
+    body.dark h2,
+    body.dark p,
+    body.dark li,
+    body.dark a,
+    body.dark button {    
+        color: white;
+    }     
