@@ -1,0 +1,90 @@
+/* Fundo da tela (Verde-limão semi-transparente) */
+body {
+    background-color: rgba(191, 255, 0, 0.471);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+/* O card principal - Com transparência para o desfoque funcionar */
+.card {
+    background-color: rgba(255, 255, 255, 0.65); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    animation: surgir 0.8s ease forwards;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Caixa menor, preta e desfocada */
+.titulo {
+    color: #eeff00; 
+    font-size: 2.5rem;
+    margin: 0 auto 20px auto;
+    padding: 15px 40px;
+    display: inline-block; /* Deixa a caixa pequena */
+    background: rgba(0, 0, 0, 0.75); /* Preto transparente */
+    border-radius: 20px;
+    
+    /* Efeito de desfoque no fundo */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); 
+    
+    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.2), 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Estilo apenas do campo de texto (Input) */
+.formulario input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Estilo apenas do Botão */
+.formulario button {
+    padding: 10px 20px;
+    background-color: #2b3e50;
+    color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de passar o mouse no botão */
+.formulario button:hover {
+    background-color: #1a252f;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #1a252f;
+    transform: scale(1.1); /* Faz o botão aumentar de tamanho suavemente */
+    
+}
+
+/* 1. Criando o roteiro da animação chamado "surgir" */
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Começa 30px abaixo e invisível */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Termina no lugar certo e visível */
+    }
+}
