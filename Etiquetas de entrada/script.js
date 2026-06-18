@@ -1,17 +1,13 @@
-const inputName = document.getElementById("nome")
+const botao = document.getElementById("button1");
 
-const botao = document.getElementById("botao")
+botao.addEventListener("click", function () {
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem");
 
-const mensagem = document.getElementById("mensagem")
-
-botao.addEventListener("click", function (){
-    const nome = imputNome.value;
-
-    if (nome == "") {
+    if (nome === "") {
         mensagem.textContent = "Digite um nome!";
-        return
+        return;
     }
-
-
+    
     mensagem.textContent = `Bem-Vindo, ${nome}!`;
 });
