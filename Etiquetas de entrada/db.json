@@ -1,0 +1,18 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Guilherme",
+      "email": "guilhermemarquesf0@gmail.com",
+      "ativo": true,
+      "datacadastro": "2026-06-18"
+    },
+    {
+      "id": 2,
+      "nome": "Livia",
+      "email": "guilhermecontas78@gmail.com",
+      "ativo": false,
+      "datacadastro": "2026-06-18"
+    }
+  ]
+}
