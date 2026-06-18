@@ -85,6 +85,6 @@ p {
     }
     to {
         opacity: 1;
-        transform: translateY(0);    /* Termina no lugar certo e visível */
+        transform: translateY(3);    /* Termina no lugar certo e visível */
     }
 }
