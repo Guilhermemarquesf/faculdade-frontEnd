@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Cadastro</title>
 </head>
+
 <body>
+
     <div class="card">
 
         <h1 class="titulo">Bem Vindo!</h1>
 
-        <p>Voce recebeu acesso a nossa plataforma!</p>
-        
-        <form class="formulario">   
-            <input
-            type="text"
-            id="nome"
-            placeholder="Digite o nome de usuário..."
-            >
+        <p>Você recebeu acesso à nossa plataforma!</p>
+
+        <form class="formulario">
+
+            <!-- Nome -->
+            <input type="text" id="nome" placeholder="Digite o nome de usuário...">
+
+            <!-- Email -->
+            <input type="email" id="email" placeholder="Digite seu e-mail...">
+
+            <!-- Senha -->
+            <input type="password" id="senha" placeholder="Digite sua senha">
+
+            <!-- Mensagem -->
+            <p id="mensagem"></p>
+
+            <!-- Botão sempre no final -->
             <button type="submit" class="button1">
                 Inscreva-se
             </button>
 
-            <p id="mensagem"></p>
+        </form>
 
-            <input 
-            type="email"
-            id="email"
-            placeholder="Digite seu e-mail..."
-            >
-            
-            <input 
-            type="password"
-            id="senha"
-            placeholder="Digite sua senha "
-            >
-
-
-        </form>     
     </div>
 
     <script src="script.js"></script>
 
 </body>
-   
+
 </html>

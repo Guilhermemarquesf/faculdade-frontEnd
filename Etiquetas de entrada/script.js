@@ -1,4 +1,4 @@
-document.querySelector(".formulario").addEventListener("submit", function (e) {
+document.querySelector(".formulario").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const nome = document.getElementById("nome").value.trim();
@@ -20,8 +20,37 @@ document.querySelector(".formulario").addEventListener("submit", function (e) {
         return;
     }
 
-    mensagem.textContent = `Cadastro realizado com sucesso, ${nome}!`;
-    mensagem.style.color = "green";
+    try {
+        //  verifica se já existe
+        const existe = await fetch(`http://localhost:3000/usuarios?email=${email}`);
+        const dados = await existe.json();
 
-    this.reset();
+        if (dados.length > 0) {
+            mensagem.textContent = "Esse email já está cadastrado!";
+            mensagem.style.color = "red";
+            return;
+        }
+
+        //  salva no banco
+        await fetch("http://localhost:3000/usuarios", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome,
+                email,
+                senha
+            })
+        });
+
+        mensagem.textContent = `Cadastro realizado com sucesso, ${nome}!`;
+        mensagem.style.color = "green";
+
+        this.reset();
+
+    } catch (error) {
+        mensagem.textContent = "Erro ao salvar usuário!";
+        mensagem.style.color = "red";
+    }
 });

@@ -1,92 +1,179 @@
-/* Fundo da tela (Verde-limão semi-transparente) */
+/* =========================
+   FUNDO DA PÁGINA
+   ========================= */
 body {
+    /* cor de fundo verde com transparência */
     background-color: rgba(191, 255, 0, 0.471);
+
+    /* fonte padrão do site */
     font-family: Arial, Helvetica, sans-serif;
+
+    /* centraliza tudo na tela */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* remove margem padrão do navegador */
     margin: 0;
+
+    /* ocupa 100% da altura da tela */
     height: 100vh;
 }
 
-/* O card principal - Com transparência para o desfoque funcionar */
+
+/* =========================
+   CARD PRINCIPAL (CAIXA)
+   ========================= */
 .card {
-    background-color: rgba(255, 255, 255, 0.65); 
-    backdrop-filter: blur(10px); 
+    /* fundo branco com transparência */
+    background-color: rgba(255, 255, 255, 0.65);
+
+    /* efeito de vidro (blur no fundo) */
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+
+    /* espaçamento interno */
     padding: 40px;
+
+    /* bordas arredondadas */
     border-radius: 30px;
+
+    /* centraliza texto */
     text-align: center;
+
+    /* animação ao aparecer */
     animation: surgir 0.8s ease forwards;
+
+    /* sombra para dar profundidade */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Caixa menor, preta e desfocada */
+
+/* =========================
+   TÍTULO
+   ========================= */
 .titulo {
-    color: #eeff00; 
+    /* cor amarela do texto */
+    color: #eeff00;
+
+    /* tamanho da fonte */
     font-size: 2.5rem;
+
+    /* espaçamento externo */
     margin: 0 auto 20px auto;
+
+    /* espaço interno */
     padding: 15px 40px;
-    display: inline-block; /* Deixa a caixa pequena */
-    background: rgba(0, 0, 0, 0.75); /* Preto transparente */
+
+    /* deixa o fundo só no tamanho do texto */
+    display: inline-block;
+
+    /* fundo preto com transparência */
+    background: rgba(0, 0, 0, 0.75);
+
+    /* bordas arredondadas */
     border-radius: 20px;
-    
-    /* Efeito de desfoque no fundo */
+
+    /* efeito vidro */
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px); 
-    
-    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.2), 0 8px 16px rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(8px);
+
+    /* sombra interna + externa */
+    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.2),
+                0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+
+/* =========================
+   TEXTO NORMAL
+   ========================= */
 p {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    color: #333;        /* cor cinza escuro */
+    margin-bottom: 20px; /* espaço embaixo */
+    font-size: 1.1rem;   /* tamanho do texto */
 }
 
-/* Estilo apenas do campo de texto (Input) */
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+.formulario {
+    /* coloca elementos em coluna */
+    display: flex;
+    flex-direction: column;
+
+    /* espaço entre os elementos */
+    gap: 12px;
+}
+
+
+/* =========================
+   CAMPOS DE INPUT
+   ========================= */
 .formulario input {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s;
+    padding: 12px;            /* espaço interno */
+    border: 1px solid #ccc;   /* borda cinza */
+    border-radius: 8px;       /* cantos arredondados */
+    font-size: 1rem;          /* tamanho do texto */
+    outline: none;            /* remove borda padrão azul */
+    transition: 0.3s;         /* animação suave */
+    width: 100%;              /* ocupa toda largura */
+    box-sizing: border-box;   /* evita estouro de tamanho */
 }
 
 
+/* quando clica no input */
 .formulario input:focus {
-    border-color: #2b3e50;
-    box-shadow: 0 0 6px rgba(43, 62, 80, 0.3);
+    border-color: #2b3e50; /* muda cor da borda */
+    box-shadow: 0 0 6px rgba(43, 62, 80, 0.3); /* brilho */
 }
 
-/* Estilo apenas do Botão */
+
+/* =========================
+   BOTÃO
+   ========================= */
 .formulario button {
-    padding: 10px 20px;
-    background-color: #2b3e50;
-    color: #ccc;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    padding: 12px;              /* espaço interno */
+    background-color: #2b3e50;  /* cor do botão */
+    color: #ccc;                /* cor do texto */
+    border: none;               /* sem borda */
+    border-radius: 8px;         /* bordas arredondadas */
+    cursor: pointer;            /* mãozinha no mouse */
+    font-size: 1rem;            /* tamanho do texto */
+    width: 100%;                /* ocupa toda largura */
+    box-sizing: border-box;     /* evita estouro */
+    transition: all 0.3s ease;  /* animação suave */
 }
 
-/* Efeito de passar o mouse no botão */
+
+/* quando passa o mouse no botão */
 .formulario button:hover {
-    background-color: #1a252f;
-    transform: scale(1.1);
-    transition: 0.3s;
+    background-color: #1a252f; /* escurece */
+    transform: scale(1.03);    /* aumenta levemente */
 }
 
-/* 1. Criando o roteiro da animação chamado "surgir" */
+
+/* =========================
+   MENSAGEM
+   ========================= */
+#mensagem {
+    margin-top: 10px;   /* espaço acima */
+    font-size: 0.95rem; /* tamanho menor */
+    font-weight: bold;  /* negrito */
+}
+
+
+/* =========================
+   ANIMAÇÃO DE ENTRADA
+   ========================= */
 @keyframes surgir {
     from {
-        opacity: 0;
-        transform: translateY(30px); /* Começa 30px abaixo e invisível */
+        opacity: 0;                  /* começa invisível */
+        transform: translateY(30px); /* começa abaixo */
     }
+
     to {
-        opacity: 1;
-        transform: translateY(0);    /* Termina no lugar certo e visível */
+        opacity: 1;                  /* aparece */
+        transform: translateY(0);    /* vai pra posição normal */
     }
 }
