@@ -18,7 +18,7 @@ body {
     border-radius: 30px;
     text-align: center;
     animation: surgir 0.8s ease forwards;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* Caixa menor, preta e desfocada */
@@ -46,11 +46,18 @@ p {
 
 /* Estilo apenas do campo de texto (Input) */
 .formulario input {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
+    border-radius: 8px;
     font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.formulario input:focus {
+    border-color: #2b3e50;
+    box-shadow: 0 0 6px rgba(43, 62, 80, 0.3);
 }
 
 /* Estilo apenas do Botão */
@@ -68,13 +75,8 @@ p {
 /* Efeito de passar o mouse no botão */
 .formulario button:hover {
     background-color: #1a252f;
-    transition: all 0.3s ease;
-}
-
-.botao:hover {
-    background-color: #1a252f;
-    transform: scale(1.1); /* Faz o botão aumentar de tamanho suavemente */
-    
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 /* 1. Criando o roteiro da animação chamado "surgir" */
@@ -85,6 +87,6 @@ p {
     }
     to {
         opacity: 1;
-        transform: translateY(3);    /* Termina no lugar certo e visível */
+        transform: translateY(0);    /* Termina no lugar certo e visível */
     }
 }

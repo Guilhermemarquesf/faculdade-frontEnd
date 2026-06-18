@@ -1,13 +1,27 @@
-const botao = document.getElementById("button1");
+document.querySelector(".formulario").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-botao.addEventListener("click", function () {
-    const nome = document.getElementById("nome").value;
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value;
     const mensagem = document.getElementById("mensagem");
 
-    if (nome === "") {
-        mensagem.textContent = "Digite um nome!";
+    mensagem.style.fontWeight = "bold";
+
+    if (nome === "" || email === "" || senha === "") {
+        mensagem.textContent = "Preencha todos os campos!";
+        mensagem.style.color = "red";
         return;
     }
-    
-    mensagem.textContent = `Bem-Vindo, ${nome}!`;
+
+    if (senha.length < 6) {
+        mensagem.textContent = "A senha deve ter pelo menos 6 caracteres!";
+        mensagem.style.color = "red";
+        return;
+    }
+
+    mensagem.textContent = `Cadastro realizado com sucesso, ${nome}!`;
+    mensagem.style.color = "green";
+
+    this.reset();
 });
